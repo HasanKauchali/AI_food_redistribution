@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container mt-5">
+    <h1 class="mb-4">Dashboard & Insights</h1>
+
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <h4 class="text-center">Donor Type vs Quantity</h4>
+            <img src="data:image/png;base64,{{ charts[0] }}" class="img-fluid">
+        </div>
+        <div class="col-md-6 mb-4">
+            <h4 class="text-center">Donations by Food Type</h4>
+            <img src="data:image/png;base64,{{ charts[1] }}" class="img-fluid">
+        </div>
+        <div class="col-md-12 mb-4">
+            <h4 class="text-center">Donations by Location</h4>
+            <img src="data:image/png;base64,{{ charts[2] }}" class="img-fluid">
+        </div>
+    </div>
+</div>
+</body>
+</html>

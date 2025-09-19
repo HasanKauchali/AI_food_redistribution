@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Matching</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container mt-5">
+    <h1>AI Matching Results</h1>
+    <table class="table table-striped mt-3">
+        <thead>
+            <tr>
+                <th>Donor</th>
+                <th>Food</th>
+                <th>Receiver</th>
+                <th>Quantity</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for m in matches %}
+            <tr>
+                <td>{{ m.donor_name }}</td>
+                <td>{{ m.food_details }}</td>
+                <td>{{ m.receiver_name }}</td>
+                <td>{{ m.quantity }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

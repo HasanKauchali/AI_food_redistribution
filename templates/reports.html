@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reports</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Reports</h2>
+
+        <h4>Donations</h4>
+        <div class="table-responsive mb-4">
+            <table class="table table-striped table-bordered">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Donor Name</th>
+                        <th>Food Details</th>
+                        <th>Quantity</th>
+                        <th>Donor Type</th>
+                        <th>Location</th>
+                        <th>Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for d in donations %}
+                    <tr>
+                        <td>{{ d.donor_name }}</td>
+                        <td>{{ d.food_details }}</td>
+                        <td>{{ d.quantity }}</td>
+                        <td>{{ d.donor_type }}</td>
+                        <td>{{ d.donor_location }}</td>
+                        <td>{{ d.donation_time }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <h4>Receivers</h4>
+        <div class="table-responsive mb-4">
+            <table class="table table-striped table-bordered">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Receiver Name</th>
+                        <th>Food Needed</th>
+                        <th>Receiver Type</th>
+                        <th>Location</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for r in receivers %}
+                    <tr>
+                        <td>{{ r.name }}</td>
+                        <td>{{ r.food_needed }}</td>
+                        <td>{{ r.receiver_type }}</td>
+                        <td>{{ r.location }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <div class="text-center mt-4">
+            <a href="{{ url_for('index') }}" class="btn btn-success btn-lg">Back to Home</a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
