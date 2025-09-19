@@ -21,26 +21,6 @@ It simplifies food distribution, improves transparency, and supports social good
 - Enhance transparency with structured distribution tracking  
 
 ---
-
-## 🖼️ Screenshots
-
-### 🏠 Home Page
-![Home](Screenshots/home.png)
-
-### 🍛 Donor Form
-![Donate Food](Screenshots/donor.png)
-
-### 🏢 Receiver Form
-![Receiver Request](Screenshots/receiver.png)
-
-### 🤝 AI Matching
-![Matching](Screenshots/match.png)
-
-### 📊 Reports & Analytics
-![Reports](Screenshots/reports.png)
-
----
-
 ## 🧠 Technology Stack
 
 ### Frontend – Bootstrap + Jinja Templates
